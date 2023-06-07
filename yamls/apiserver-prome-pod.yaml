@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: apiserver-prome-pod
+  labels:
+    app: prome
+  namespace: prome
+spec:
+  containers:
+    - name: apiserver-prome-container
+      image: ashraf10039/prometheus-task
+      ports:
+        - containerPort: 8081

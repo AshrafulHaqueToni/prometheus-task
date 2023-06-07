@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: apiserver-exporter
+  namespace: prome
+  labels:
+    app: prome
+spec:
+  type: ClusterIP
+  selector:
+    app: prome
+  ports:
+    - port: 8081
+      targetPort: 8081
+      name: web
+      protocol: TCP
